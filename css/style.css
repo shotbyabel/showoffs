@@ -1,0 +1,168 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #121212;
+     font-size: 16px;
+     line-height: 1.4;
+     font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+#container{
+    margin-top: 60px;
+}
+
+#page-header {
+    background: #990033;
+    color: white;
+    overflow: hidden;
+    border-bottom: 1px solid grey;
+    padding: 0 3%;
+    opacity: 0.9;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 60px;
+    top: 0px;
+
+}
+
+#page-header a {
+    color: inherit;
+    text-decoration: none;
+}
+#page-header h1 {
+    float: left;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    margin: 20px 0 0 0;
+    text-shadow: 2px 1px 1px black;
+
+}
+#page-header nav {
+    float: right;
+}
+#page-header nav li {
+    float: left;
+    text-transform:uppercase;
+    text-shadow: 1px 1px 1px black;
+}
+#page-header nav a {
+    display: block;
+    padding: 20px 15px;
+}
+#page-header nav li a:hover {
+    color: black;
+}
+#page-header nav li.active a {
+    background: #666;
+}
+#page-header nav strong {
+    font-family: 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+}
+
+#carousel img{
+max-width: 100%;
+/*max-height: 100%;*/
+vertical-align: middle;
+margin-bottom: 100px;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+/* Center the container */
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+h2{
+    font-size: 2em;
+    line-height: 1.4em;
+}
+p{
+    font-size: 1.0em;
+    line-height: 1.4em;
+}
+
+h2,p{
+    position:relative;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+
+
+@media screen and (min-width: 1px) and (max-width: 320px){
+    body{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 768px){
+      body{
+        font-size: 14px;
+    }    
+}
+@media screen and (min-width: 769px) and (max-width: 1440px){
+
+h2, p{
+    max-width: 720px;
+}  
+.infoblock{
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 9999px){
+
+h2, p{
+    max-width: 960px;
+}  
+.infoblock{
+    padding: 20px;
+  }
+}
+
+
+
+
+
+/*
+@import 'base/base.css';
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/*@import 'comp/nav.css';
+@import 'comp/slider.css';
+@import 'comp/gallery.css';
+@import 'comp/single-photo.css';
+@import 'comp/search.css';
+@import 'comp/contact.css';
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

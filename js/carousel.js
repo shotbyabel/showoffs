@@ -1,16 +1,34 @@
-Element.prototype.carousel = function(){
+var Carousel = function(){
 
 	var carousel =  this;
 	var wrapper = carousel.children[0];
 	var slides = wrapper.children;
-	var position = 0;
-
 	var leftBtn = document.createElement('div');
 	var rightBtn = document.createElement('div');
+	var position = 0;
+
+	//var leftBtn = document.createElement('div');
+	//var rightBtn = document.createElement('div');
 
 
 	var width = window.innerWidth;
 	wrapper.style.width = width  * slides.length + "px";
+
+	this.animate = function(){
+
+		var count = 0;
+
+	setInterval(function (){
+		wrapper.style.left = count* (window.innerWidth*-1)+"px";
+		count = count +1;
+		if(count === slides.length){
+			count = 0;
+		}
+		console.log(count);
+
+	},3000)	
+
+	};
 
 	this.createButtons = function(){
 
@@ -30,8 +48,8 @@ Element.prototype.carousel = function(){
 		});
 
 
-		slider.appendChild(leftBtn);
-		slider.appendChild(rightBtn);
+		carousel.appendChild(leftBtn);
+		carousel.appendChild(rightBtn);
 
 
 	};
@@ -45,18 +63,15 @@ Element.prototype.carousel = function(){
 	
 		}
 
-		leftBtn.style.top = rightBtn.style.top = (window.innerHeight / 2) + "px";
+		//leftBtn.style.top = rightBtn.style.top = (window.innerHeight / 2) + "px";
 		
 
 	};
 
-	this.resize();
 	this.createButtons();
+	this.resize();
+	this.animate();
 
-
-
-
-	console.log(slides);
 	
 };
 /* end Slider */

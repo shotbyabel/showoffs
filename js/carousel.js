@@ -26,7 +26,7 @@ var Carousel = function(){
 		}
 		console.log(count);
 
-	},3000)	
+	},3500)	
 
 	};
 
